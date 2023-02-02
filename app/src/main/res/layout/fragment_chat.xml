@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.chat.ChatFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5sp"
+        android:layout_above="@id/MessengerCard"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MessengerCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        app:cardCornerRadius="10sp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/MessengerEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Say Something"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="textMultiLine"
+                android:layout_toLeftOf="@id/MessageSendBtn"
+                />
+
+            <ImageView
+                android:id="@+id/MessageSendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_send_24"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

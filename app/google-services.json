@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1041667591058",
+    "project_id": "collegediary-af572",
+    "storage_bucket": "collegediary-af572.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041667591058:android:d5e404222ca872a3c6cf4b",
+        "android_client_info": {
+          "package_name": "com.gigawattstechnology.collegediary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041667591058-rf3eoo0io15sku4e4mu1bf1u64m1jhvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2_qTEYwBMOGD8vgCyB-M26C5dSHogu34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041667591058-rf3eoo0io15sku4e4mu1bf1u64m1jhvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

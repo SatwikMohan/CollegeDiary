@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/ImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_margin="10dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="1"
+        app:sliderStartAutoCycle="true" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/CreateAnAccount"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ImageSlider"
+        android:layout_marginTop="38dp"
+        android:layout_centerInParent="true"
+        android:text="Create An Account"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_shape"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/LoginAccount"
+        android:layout_width="190sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CreateAnAccount"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_shape"
+        />
+
+
+</RelativeLayout>
