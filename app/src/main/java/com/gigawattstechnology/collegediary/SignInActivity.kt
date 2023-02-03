@@ -58,6 +58,7 @@ class SignInActivity : AppCompatActivity() {
                         //Toast.makeText(applicationContext,response.body().toString(),Toast.LENGTH_LONG).show()
                         val jsonObject= response.body()!!.getAsJsonObject("document")
                         val passw= jsonObject?.get("password").toString()
+                        val myinterests=jsonObject?.getAsJsonArray("interests")
                         //Toast.makeText(applicationContext,passw,Toast.LENGTH_LONG).show()
                         val p="\""+password+"\""
                         if(p!=passw){
@@ -67,6 +68,12 @@ class SignInActivity : AppCompatActivity() {
                             val editor=sharedPref.edit()
                             editor.putString("userMail",email)
                             editor.putString("userPass",password)
+                            var j=0
+                            for(i in myinterests!!){
+                                editor.putString("Interest"+j,i.toString().substring(1,i.toString().length-2))
+                                j++
+                            }
+                            editor.putInt("InterestSize",j)
                             editor.commit()
                             startActivity(Intent(applicationContext,HomeActivity::class.java))
                             //finish()

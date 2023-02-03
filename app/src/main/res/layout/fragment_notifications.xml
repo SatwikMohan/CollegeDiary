@@ -20,6 +20,7 @@
             android:layout_margin="10dp"/>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/InfoCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/MyProfilePic"
@@ -105,6 +106,19 @@
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/LogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/InfoCard"
+            android:layout_margin="10sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="Log OUT"
+            android:textStyle="bold"
+            />
 
     </RelativeLayout>
 

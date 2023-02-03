@@ -61,6 +61,10 @@ class ChooseInterestActivity : AppCompatActivity(),InterestClickListner {
                             val editor=sharedPreferences.edit()
                             editor.putString("userMail",email)
                             editor.putString("userPass",password)
+                            for(i in interestList.indices){
+                                editor.putString("Interest"+i,interestList.get(i))
+                            }
+                            editor.putInt("InterestSize",interestList.size)
                             editor.commit()
                             startActivity(Intent(applicationContext,HomeActivity::class.java))
                             Toast.makeText(applicationContext,response.body().toString(),Toast.LENGTH_LONG).show()

@@ -2,6 +2,7 @@ package com.gigawattstechnology.collegediary.ui.notifications
 
 import android.app.ProgressDialog
 import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.gigawattstechnology.collegediary.CustomClasses.FindDataBody
 import com.gigawattstechnology.collegediary.CustomClasses.FindDataFilter
 import com.gigawattstechnology.collegediary.CustomClasses.RetrofitInstance
 import com.gigawattstechnology.collegediary.Interfaces.DataRegisterInterface
+import com.gigawattstechnology.collegediary.MainActivity
 import com.gigawattstechnology.collegediary.databinding.FragmentNotificationsBinding
 import com.google.gson.JsonObject
 import retrofit2.Call
@@ -72,6 +74,14 @@ class NotificationsFragment : Fragment() {
                 Toast.makeText(root.context,"Failure", Toast.LENGTH_LONG).show()
             }
         })
+
+        binding.LogOut.setOnClickListener {
+            val sharedPref=binding.root.context.getSharedPreferences("User", MODE_PRIVATE)
+            val e=sharedPref.edit()
+            e.putString("userMail","userMail")
+            e.commit()
+            startActivity(Intent(root.context,MainActivity::class.java))
+        }
 
         return root
     }

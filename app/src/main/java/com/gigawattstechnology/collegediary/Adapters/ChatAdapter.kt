@@ -28,10 +28,12 @@ class ChatAdapter(val context:Context,val list:ArrayList<ChatMsg>,val User:Strin
             holder.msgRecievedCard.visibility=View.GONE
             holder.msgSentCard.visibility=View.VISIBLE
             holder.msgSendText.text=obj.msg
+            holder.userSend.text="~"+obj.user
         }else{
             holder.msgSentCard.visibility=View.GONE
             holder.msgRecievedCard.visibility=View.VISIBLE
             holder.msgRecievedText.text=obj.msg
+            holder.userRecieved.text="~"+obj.user
         }
     }
 
@@ -40,6 +42,8 @@ class ChatAdapter(val context:Context,val list:ArrayList<ChatMsg>,val User:Strin
         val msgRecievedCard=itemView.findViewById<CardView>(R.id.MeassageRecievedCard)
         val msgSendText=itemView.findViewById<TextView>(R.id.MessageSentText)
         val msgRecievedText=itemView.findViewById<TextView>(R.id.MessageRecievedText)
+        val userRecieved=itemView.findViewById<TextView>(R.id.UserRecieved)
+        val userSend=itemView.findViewById<TextView>(R.id.UserSend)
     }
 
 }

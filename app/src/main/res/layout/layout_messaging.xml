@@ -18,16 +18,35 @@
             android:backgroundTint="@color/white"
             android:layout_margin="12sp">
 
-            <TextView
-                android:id="@+id/MessageRecievedText"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Recieved"
-                android:textSize="18sp"
-                android:layout_margin="10sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                />
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/UserRecieved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~"
+                    android:textSize="12sp"
+                    android:layout_margin="5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Theme"
+                    />
+
+                <TextView
+                    android:id="@+id/MessageRecievedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recieved"
+                    android:textSize="18sp"
+                    android:layout_margin="5sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/UserRecieved"
+                    android:textColor="@color/black"
+                    />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
@@ -40,16 +59,36 @@
             android:layout_alignParentEnd="true"
             android:layout_margin="12sp">
 
-            <TextView
-                android:id="@+id/MessageSentText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sent Msg"
-                android:textSize="18sp"
-                android:layout_margin="10sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                />
+            <RelativeLayout
+                android:background="#4CAF50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/UserSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="~"
+                    android:textSize="12sp"
+                    android:layout_margin="5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Theme"
+                    />
+
+                <TextView
+                    android:id="@+id/MessageSentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sent Msg"
+                    android:textSize="18sp"
+                    android:layout_margin="5sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/UserSend"
+                    android:textColor="@color/black"
+                    />
+
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
